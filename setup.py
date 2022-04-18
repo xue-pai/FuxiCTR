@@ -16,13 +16,13 @@ setuptools.setup(
     packages=setuptools.find_packages(
         exclude=["tests", "data", "docs", "demo"]),
     include_package_data=True,
-    python_requires="==3.6.*",
+    python_requires=">=3.7.*",
     install_requires=["pandas", "numpy", "h5py", "PyYAML>=5.1", "scikit-learn", "tqdm"],
     extras_require={
-        "cpu": ["pytorch==1.0.*"],
-        "gpu": ["pytorch==1.0.*"],
+        "cpu": ["pytorch==1.7.*"],
+        "gpu": ["pytorch==1.7.*"],
     },
-    classifiers=(
+    classifiers=[
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
         'Intended Audience :: Developers',
@@ -35,7 +35,7 @@ setuptools.setup(
         'Topic :: Software Development',
         'Topic :: Software Development :: Libraries',
         'Topic :: Software Development :: Libraries :: Python Modules',
-    ),
+    ],
     license="Apache-2.0 License",
     keywords=['ctr prediction', 'recommender systems',
               'ctr', 'cvr', 'pytorch'],
